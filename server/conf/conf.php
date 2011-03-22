@@ -121,7 +121,7 @@ $PLUGINS = array(
 			)
 	),
 	"AUTH_DRIVER" => array(
-		"NAME"		=> "serial",
+		"NAME"		=> "hostdeploy",
 		"OPTIONS"	=> array(
 			"LOGIN_REDIRECT"		=> false,
 			"USERS_FILEPATH"		=> "AJXP_INSTALL_PATH/server/users/users.ser",
