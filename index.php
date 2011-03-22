@@ -58,6 +58,8 @@ include_once($confStorageDriver->getUserClassFileName());
 session_name("AjaXplorer");
 session_start();
 
+require('hostdeploy_access.php');
+
 $outputArray = array();
 $testedParams = array();
 $passed = true;
