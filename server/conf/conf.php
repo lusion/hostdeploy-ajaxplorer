@@ -42,7 +42,7 @@ defined('AJXP_EXEC') or die( 'Access not allowed');
 // Whether the users system should be active or not.
 // If set to FALSE or 0, all files and settings will be
 // accessible by everybody
-define("ENABLE_USERS", 1);
+define("ENABLE_USERS", 0);
 
 // Startup admin password (used at first creation). Once
 // The admin password is created and his password is changed, 
@@ -74,6 +74,10 @@ define("PUBLIC_DOWNLOAD_URL", "");
 
 
 define("HTTPS_POLICY_FILE", "");
+
+// HostDeploy: Get current username
+$details = posix_getpwuid(posix_geteuid());
+$username = $details['name'];
 
 /************************************************
  * TEMPORARY DIR : NOT NECESSARY IN MOST CASES
@@ -151,12 +155,12 @@ if(AJXP_Utils::userAgentIsMobile()){
 /*   + Log in as "admin" and open the "Settings" Repository
 /*********************************************************/
 $REPOSITORIES[0] = array(
-	"DISPLAY"		=>	"Default Files", 
+	"DISPLAY"		=>	"Home Directory", 
 	"DRIVER"		=>	"fs", 
 	"DRIVER_OPTIONS"=> array(
-		"PATH"			=>	realpath(dirname(__FILE__)."/../../files"), 
+		"PATH"			=>	"/home/$username", 
 		"CREATE"		=>	true,
-		"RECYCLE_BIN" 	=> 	'recycle_bin',
+		"RECYCLE_BIN" 	=> 	'lost+found',
 		"CHMOD_VALUE"   =>  '0600',
 		"DEFAULT_RIGHTS"=>  "",
 		"PAGINATION_THRESHOLD" => 500,
