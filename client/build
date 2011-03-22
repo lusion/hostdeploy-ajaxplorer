@@ -1,0 +1,2 @@
+(for x in `cat js/scriptslist.txt`; do cat $x; done) | yui-compressor --type js > js/ajaxplorer.js
+

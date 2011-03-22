@@ -54,7 +54,8 @@ Class.create("UserWidget", {
 	updateGui : function(){
 		var logging_string = "";
 		var oUser = ajaxplorer.user;		
-		if(oUser != null) 
+    /* HostDeploy: Don't show any "logged in" message
+    if(oUser != null) 
 		{
 			if(oUser.id != 'guest') 
 			{
@@ -76,6 +77,7 @@ Class.create("UserWidget", {
 			logging_string = '<div style="padding:3px 0 3px 7px;"><ajxp:message ajxp_message_id="142">'+MessageHash[144]+'</ajxp:message></div>';
 			this.element.addClassName('disabled');
 		}
+    */
 		this.element.update(logging_string);
 	},
 	
