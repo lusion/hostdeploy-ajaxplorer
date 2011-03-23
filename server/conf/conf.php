@@ -113,24 +113,13 @@ define("AJXP_TMP_DIR", "");
 /*********************************************************/
 $PLUGINS = array(
 	"CONF_DRIVER" => array(
-		"NAME"		=> "serial",
-		"OPTIONS"	=> array(
-			"REPOSITORIES_FILEPATH"	=> "AJXP_INSTALL_PATH/server/conf/repo.ser",
-			"ROLES_FILEPATH"		=> "AJXP_INSTALL_PATH/server/users/roles.ser",
-			"USERS_DIRPATH"			=> "AJXP_INSTALL_PATH/server/users",
-			/*
-			"CUSTOM_DATA"			=> array(
-				"email"	=> "Email", 
-				"country" => "Country"
-			)
-			*/
-			)
+		"NAME"		=> "none",
+		"OPTIONS"	=> array()
 	),
 	"AUTH_DRIVER" => array(
-		"NAME"		=> "serial",
+		"NAME"		=> "none",
 		"OPTIONS"	=> array(
 			"LOGIN_REDIRECT"		=> false,
-			"USERS_FILEPATH"		=> "AJXP_INSTALL_PATH/server/users/users.ser",
 			"AUTOCREATE_AJXPUSER" 	=> false, 
 			"TRANSMIT_CLEAR_PASS"	=> false)
 	),
@@ -191,13 +180,13 @@ $REPOSITORIES["ajxp_shared"] = array(
 	)	
 );
 
-// ADMIN REPOSITORY
+/* ADMIN REPOSITORY
 $REPOSITORIES[1] = array(
 	"DISPLAY"		=>	"Settings", 
 	"DISPLAY_ID"		=>	"165", 
 	"DRIVER"		=>	"ajxp_conf", 
 	"DRIVER_OPTIONS"=> array()	
-);
+);*/
 
 /*********************************************/
 /*	DEFAULT LANGUAGE

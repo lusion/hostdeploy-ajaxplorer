@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<confdriver name="none" label="noneized Storage" description="Stores the conf data as noneized PHP values on the filesystem.">
+	<class_definition filename="plugins/conf.none/class.noneConfDriver.php" classname="noneConfDriver"/>
+	<registry_contributions>
+		<external_file filename="server/xml/standard_conf_actions.xml" include="actions/*" exclude=""/>
+	</registry_contributions>
+</confdriver>
